@@ -2,7 +2,6 @@
 #include "paddle.cpp"
 #include "ball.h"
 #include "ball.cpp"
-#include "bricks.h"
 #include <iostream>
 #include <sstream>
 #include <fstream>
