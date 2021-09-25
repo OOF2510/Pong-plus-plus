@@ -1,2 +1,4 @@
 [Pp]ong
 *.o
+dist/
+build/
