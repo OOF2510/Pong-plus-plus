@@ -1,0 +1,20 @@
+name: Build
+
+on: [ push ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install build deps
+        run: |
+	  sudo apt-get update
+	  sudo apt-get install -y g++ libsfml-dev
+
+      - name: Build
+        run: |
+          g++ -std=c++11 -c main.cpp
+	  g++ -o pong main.o -lsfml-window -lsfml-graphics -lsfml-audio -lsfml-system
